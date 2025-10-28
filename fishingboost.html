@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FishingBoost - Página Oficial</title>
+  <style>
+    :root {
+      --verde: #2e8b57;
+      --verde-claro: #4fbf8f;
+      --azul: #1b4965;
+      --azul-claro: #62b6cb;
+      --bg: #f1faf8;
+      --card: #ffffff;
+      --radius: 16px;
+      --shadow: 0 6px 20px rgba(0,0,0,0.08);
+      --text: #113;
+      --maxw: 1100px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    .logo img {
+      height: 200px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .download-btn {
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      background: var(--verde-claro);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 22px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: var(--verde);
+      transform: translateY(-2px);
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2rem;
+      color: var(--azul);
+      text-align: center;
+    }
+
+    .subtitle {
+      color: #517d7b;
+      font-size: 1.1rem;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* Secciones */
+    .section {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      background: var(--card);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .section .text {
+      flex: 1;
+    }
+
+    .section .text h2 {
+      color: var(--azul);
+      margin-bottom: 10px;
+    }
+
+    .section .text p {
+      color: #333;
+    }
+
+    .mobile-img {
+      width: 38%;
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .mobile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 9 / 16;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .section.invert {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: 800px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .mobile-img {
+        width: 70%;
+        max-width: 360px;
+      }
+      .download-btn {
+        position: static;
+        margin-top: 15px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      color: #517d7b;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">
+        <img src="logo.jpg" alt="Logo FishingBoost">
+      </div>
+      <a href="app-debug-androidTest.apk" class="download-btn">⬇ Descargar APK</a>
+      <h1>FishingBoost</h1>
+      <div class="subtitle">La app para amantes de la pesca deportiva</div>
+    </header>
+
+    <!-- Sección 1 -->
+    <section class="section">
+      <div class="text">
+        <h2>Embalses</h2>
+        <p>
+            En esta función podrás consultar el nivel de agua de los principales embalses del país, con datos actualizados de hasta 62 embalses diferentes.
+            Ideal para planificar tus jornadas de pesca con antelación, ya que podrás conocer el porcentaje de ocupación, el volumen actual, y la variación semanal del nivel de agua.
+            La información se actualiza de forma bisemanal, garantizando datos fiables y precisos para que elijas el mejor lugar y momento para pescar.
+            Además, puedes marcar tus embalses favoritos para acceder rápidamente a ellos y comparar su evolución con el paso del tiempo.
+        </p>
+        </div>
+      <div class="mobile-img">
+        <img src="IMG-20250926-WA0004.jpg" alt="Vista de embalse">
+      </div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section class="section invert">
+      <div class="text">
+        <h2>Tiempo y Alertas</h2>
+        <p>
+            Consulta la previsión meteorológica detallada para tus zonas de pesca favoritas, incluyendo temperatura, viento, lluvias y presión atmosférica.
+            Gracias a la información actualizada podrás planificar tus salidas con seguridad, eligiendo los mejores días y condiciones para disfrutar al máximo de tu jornada.
+            Además, la función de alertas personalizadas te permite recibir notificaciones sobre cambios bruscos del clima, tormentas, o cualquier evento que pueda afectar tu experiencia de pesca.
+            Con FishingBoost estarás siempre un paso adelante, preparado para cualquier condición meteorológica y centrado únicamente en lo que importa: pescar y disfrutar.
+        </p>
+      </div>
+      <div class="mobile-img">
+        <img src="IMG-20250926-WA0003.jpg" alt="Predicción del tiempo">
+      </div>
+    </section>
+
+    <!-- Sección 3 -->
+    <section class="section">
+      <div class="text">
+        <h2>Calendario Lunar</h2>
+        <p>
+            Accede a un calendario lunar interactivo que te mostrará las fases de la luna y cómo influyen directamente en la actividad de los peces.
+            Descubre cuáles son los mejores días y horas para salir a pescar según el ciclo lunar y las condiciones astronómicas.
+            Podrás sincronizar tus salidas con los momentos de mayor probabilidad de picada, optimizando tus resultados y aprovechando cada jornada al máximo.
+            Además, el calendario se actualiza automáticamente para ofrecerte una visión clara y sencilla de todo el mes, convirtiéndose en una herramienta esencial para todo pescador que quiera mejorar su precisión y éxito en el agua.
+        </p>
+      </div>
+      <div class="mobile-img">
+        <img src="IMG-20250926-WA0002.jpg " alt="Calendario lunar">
+      </div>
+    </section>
+
+    <!-- Sección 4 -->
+    <section class="section invert">
+      <div class="text">
+        <h2>Alarmas y Favoritos</h2>
+        <p>
+La función de Alarmas te permite mantener un control total sobre tus lugares de pesca favoritos.
+Podrás activar notificaciones automáticas para saber cuándo un embalse cambia de nivel, cuándo hay un aumento de caudal o si se producen condiciones meteorológicas relevantes para tu próxima salida.
+Configura alertas personalizadas según tus preferencias, elige qué tipo de avisos recibir y con qué frecuencia.
+De esta manera, FishingBoost te mantiene siempre al tanto de las condiciones ideales para pescar, ayudándote a planificar tus jornadas con precisión y sin sorpresas.
+        
+        
+        </p>
+      </div>
+      <div class="mobile-img">
+        <img src="alarmas.jpg" alt="Pantalla de alarmas y favoritos">
+      </div>
+    </section>
+
+     <section class="section">
+      <div class="text">
+        <h2>sugerencias</h2>
+        <p>
+
+
+
+En el apartado de Configuración podrás personalizar FishingBoost para adaptarla completamente a ti.
+Selecciona tu ubicación actual o zona de pesca habitual para recibir datos más precisos sobre el clima, los embalses y las condiciones locales.
+También podrás cambiar el idioma de la aplicación entre español e inglés, facilitando su uso a todos los pescadores sin importar su idioma.
+Además, tendrás acceso a opciones adicionales como ajustar las unidades de medida, administrar tus embalses favoritos o restablecer tus preferencias.
+Todo está pensado para que la aplicación funcione exactamente como tú la necesitas: intuitiva, flexible y a tu medida.
+
+
+  </p>
+      </div>
+      <div class="mobile-img">
+        <img src="sugerencias.jpg" alt="Calendario lunar" style="min-height: 500px;">
+      </div>
+    </section>
+
+    <!-- Sección 4 -->
+    <section class="section invert">
+      <div class="text">
+        <h2>Configuración</h2>
+        <p>
+
+       Tu opinión es muy importante para nosotros. En este apartado podrás enviar tus ideas, comentarios o propuestas para ayudarnos a mejorar FishingBoost y hacerla aún más útil para todos los pescadores.
+        Queremos que esta aplicación crezca contigo, por eso valoramos cada sugerencia: desde nuevas funciones que te gustaría ver, hasta mejoras en el diseño o el funcionamiento general.
+        Nuestro objetivo es construir una herramienta completa y práctica, basada en las necesidades reales de la comunidad de pesca.
+        ¡Cuéntanos qué te gustaría añadir, cambiar o mejorar y forma parte del desarrollo de FishingBoost!
+      
+
+        </p>
+      </div>
+      <div class="mobile-img">
+        <img src="configu.jpg" alt="Pantalla de alarmas y favoritos">
+      </div>
+    </section>
+
+    <footer>
+      © 2025 FishingBoost.
+    </footer>
+  </div>
+</body>
+</html>
