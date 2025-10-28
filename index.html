@@ -37,7 +37,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
       margin-bottom: 40px;
     }
 
@@ -47,22 +46,50 @@
       object-fit: contain;
     }
 
+    /* Contenedor de botones */
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+      align-items: center;
+    }
+
     .download-btn {
-      position: absolute;
-      right: 0;
-      bottom: -15px;
       background: var(--verde-claro);
       color: #fff;
       text-decoration: none;
       font-weight: 600;
-      padding: 12px 22px;
+      padding: 14px 28px;
       border-radius: 30px;
       box-shadow: var(--shadow);
       transition: all 0.3s ease;
+      font-size: 1.1rem;
+      min-width: 240px;
+      text-align: center;
     }
 
     .download-btn:hover {
       background: var(--verde);
+      transform: translateY(-2px);
+    }
+
+    .install-btn {
+      background: var(--azul);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      min-width: 240px;
+      text-align: center;
+    }
+
+    .install-btn:hover {
+      background: var(--azul-claro);
       transform: translateY(-2px);
     }
 
@@ -135,13 +162,15 @@
         width: 70%;
         max-width: 360px;
       }
-      .download-btn {
-        position: static;
-        margin-top: 15px;
+      .download-btn,
+      .install-btn {
+        width: 85%;
+        max-width: 300px;
+        padding: 16px 20px;
+        font-size: 1rem;
       }
-       .download-btn2 {
-        position: static;
-        margin-top: 15px;
+      .btn-container {
+        gap: 14px;
       }
     }
 
@@ -159,14 +188,18 @@
       <div class="logo">
         <img src="logo.jpg" alt="Logo FishingBoost">
       </div>
-      <a href="app-debug.apk" class="download-btn">⬇ Descargar APK</a>
-      <a href="install_app.html" class="download-btn2">Como instalar la aplicación32</a>
+
+      <!-- DOS BOTONES IGUALES -->
+      <div class="btn-container">
+        <a href="app-debug.apk" class="download-btn">Descargar APK</a>
+        <a href="instalar.html" class="install-btn">Cómo instalar</a>
+      </div>
+
       <h1>FishingBoost</h1>
       <div class="subtitle">La app para amantes de la pesca deportiva</div>
     </header>
 
-
-    <!-- Sección 1sdcsdfdsdfs -->
+    <!-- Sección 1 -->
     <section class="section">
       <div class="text">
         <h2>Embalses</h2>
@@ -176,14 +209,14 @@
             La información se actualiza de forma bisemanal, garantizando datos fiables y precisos para que elijas el mejor lugar y momento para pescar.
             Además, puedes marcar tus embalses favoritos para acceder rápidamente a ellos y comparar su evolución con el paso del tiempo.
         </p>
-        </div>
+      </div>
       <div class="mobile-img">
         <img src="IMG-20250926-WA0004.jpg" alt="Vista de embalse">
       </div>
     </section>
 
     <!-- Sección 2 -->
-    <section class="section">
+    <section class="section invert">
       <div class="text">
         <h2>Tiempo y Alertas</h2>
         <p>
@@ -210,21 +243,19 @@
         </p>
       </div>
       <div class="mobile-img">
-        <img src="IMG-20250926-WA0002.jpg " alt="Calendario lunar">
+        <img src="IMG-20250926-WA0002.jpg" alt="Calendario lunar">
       </div>
     </section>
 
     <!-- Sección 4 -->
-    <section class="section">
+    <section class="section invert">
       <div class="text">
         <h2>Alarmas y Favoritos</h2>
         <p>
-La función de Alarmas te permite mantener un control total sobre tus lugares de pesca favoritos.
-Podrás activar notificaciones automáticas para saber cuándo un embalse cambia de nivel, cuándo hay un aumento de caudal o si se producen condiciones meteorológicas relevantes para tu próxima salida.
-Configura alertas personalizadas según tus preferencias, elige qué tipo de avisos recibir y con qué frecuencia.
-De esta manera, FishingBoost te mantiene siempre al tanto de las condiciones ideales para pescar, ayudándote a planificar tus jornadas con precisión y sin sorpresas.
-        
-        
+            La función de Alarmas te permite mantener un control total sobre tus lugares de pesca favoritos.
+            Podrás activar notificaciones automáticas para saber cuándo un embalse cambia de nivel, cuándo hay un aumento de caudal o si se producen condiciones meteorológicas relevantes para tu próxima salida.
+            Configura alertas personalizadas según tus preferencias, elige qué tipo de avisos recibir y con qué frecuencia.
+            De esta manera, FishingBoost te mantiene siempre al tanto de las condiciones ideales para pescar, ayudándote a planificar tus jornadas con precisión y sin sorpresas.
         </p>
       </div>
       <div class="mobile-img">
@@ -232,43 +263,36 @@ De esta manera, FishingBoost te mantiene siempre al tanto de las condiciones ide
       </div>
     </section>
 
-     <section class="section">
+    <!-- Sección 5 -->
+    <section class="section">
       <div class="text">
         <h2>Sugerencias</h2>
         <p>
-
-
-
-En el apartado de Configuración podrás personalizar FishingBoost para adaptarla completamente a ti.
-Selecciona tu ubicación actual o zona de pesca habitual para recibir datos más precisos sobre el clima, los embalses y las condiciones locales.
-También podrás cambiar el idioma de la aplicación entre español e inglés, facilitando su uso a todos los pescadores sin importar su idioma.
-Además, tendrás acceso a opciones adicionales como ajustar las unidades de medida, administrar tus embalses favoritos o restablecer tus preferencias.
-Todo está pensado para que la aplicación funcione exactamente como tú la necesitas: intuitiva, flexible y a tu medida.
-
-
-  </p>
-      </div>
-      <div class="mobile-img">
-        <img src="sugerencias.jpg" alt="Calendario lunar" style="min-height: 500px;">
-      </div>
-    </section>
-
-    <!-- Sección 4 -->
-    <section class="section">
-      <div class="text">
-        <h2>Configuración</h2>
-        <p>
-
-       Tu opinión es muy importante para nosotros. En este apartado podrás enviar tus ideas, comentarios o propuestas para ayudarnos a mejorar FishingBoost y hacerla aún más útil para todos los pescadores.
-        Queremos que esta aplicación crezca contigo, por eso valoramos cada sugerencia: desde nuevas funciones que te gustaría ver, hasta mejoras en el diseño o el funcionamiento general.
-        Nuestro objetivo es construir una herramienta completa y práctica, basada en las necesidades reales de la comunidad de pesca.
-        ¡Cuéntanos qué te gustaría añadir, cambiar o mejorar y forma parte del desarrollo de FishingBoost!
-      
-
+            En el apartado de Configuración podrás personalizar FishingBoost para adaptarla completamente a ti.
+            Selecciona tu ubicación actual o zona de pesca habitual para recibir datos más precisos sobre el clima, los embalses y las condiciones locales.
+            También podrás cambiar el idioma de la aplicación entre español e inglés, facilitando su uso a todos los pescadores sin importar su idioma.
+            Además, tendrás acceso a opciones adicionales como ajustar las unidades de medida, administrar tus embalses favoritos o restablecer tus preferencias.
+            Todo está pensado para que la aplicación funcione exactamente como tú la necesitas: intuitiva, flexible y a tu medida.
         </p>
       </div>
       <div class="mobile-img">
-        <img src="configu.jpg" alt="Pantalla de alarmas y favoritos">
+        <img src="sugerencias.jpg" alt="Sugerencias">
+      </div>
+    </section>
+
+    <!-- Sección 6 -->
+    <section class="section invert">
+      <div class="text">
+        <h2>Configuración</h2>
+        <p>
+            Tu opinión es muy importante para nosotros. En este apartado podrás enviar tus ideas, comentarios o propuestas para ayudarnos a mejorar FishingBoost y hacerla aún más útil para todos los pescadores.
+            Queremos que esta aplicación crezca contigo, por eso valoramos cada sugerencia: desde nuevas funciones que te gustaría ver, hasta mejoras en el diseño o el funcionamiento general.
+            Nuestro objetivo es construir una herramienta completa y práctica, basada en las necesidades reales de la comunidad de pesca.
+            ¡Cuéntanos qué te gustaría añadir, cambiar o mejorar y forma parte del desarrollo de FishingBoost!
+        </p>
+      </div>
+      <div class="mobile-img">
+        <img src="configu.jpg" alt="Configuración">
       </div>
     </section>
 
